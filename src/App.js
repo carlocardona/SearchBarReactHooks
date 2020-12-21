@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from "react";
+import {Numbers} from "./components/Numbers";
 
 function App() {
+
+  const [persons] = useState([
+    {name: "Steve Jobs", number: "123-456-7890"},
+    {name: "Steve Wozniak", number: "132-890-5701"},
+    {name: "Jonny Ives", number: "890-270-5700"},
+  ])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Numbers persons={persons} />
     </div>
   );
 }
