@@ -27,7 +27,7 @@ export const Numbers = props => {
     return (
         <div>
             <h1>Numbers</h1>
-            filter: <input onChange={event => handleChange(e.target.value)}/>
+            filter: <input onChange={event => handleChange(event.target.value)}/>
             {filterDisplay.map((person, i) => (
                 <div key={i}>
                     <li>
